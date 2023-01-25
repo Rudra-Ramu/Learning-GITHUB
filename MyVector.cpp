@@ -62,11 +62,6 @@ else if (op == 2)
 std::cout << "op2: cx = " << vectors.sub1() << " cy = " <<
 vectors.sub2() << " cz = " << vectors.sub3() << std::endl;
 }
-else if (op == 3)
-{
-std::cout << "op3: cx = " << vectors.dot1() << " cy = " <<
-vectors.dot2() << " cz = " << vectors.dot3() << std::endl;
-}
 else
 {
 std::cout << "Enter the above mentioned operation code for respective
