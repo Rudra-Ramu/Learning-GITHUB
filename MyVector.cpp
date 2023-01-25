@@ -14,6 +14,15 @@ int add3() { return (z1 + z2); }
 int sub1() { return (x1 - x2); }
 int sub2() { return (y1 - y2); }
 int sub3() { return (z1 - z2); }
+int dot1() { return (x1 * x2); }
+int dot2() { return (y1 * y2); }
+int dot3() { return (z1 * z2); }
+int cross1() { return ((y1 * z2) - (z1 * y2)); }
+int cross2() { return ((x1 * z2) - (z1 * x2)); }
+int cross3() { return ((x1 * y2) - (y1 * x2)); }
+int mag_a() { return sqrt((x1 * x1) + (y1 * y1) + (z1 * z1)); }
+int mag_b() { return sqrt((x2 * x2) + (y2 * y2) + (z2 * z2)); }
+
 
 ~MyVector() { std::cout << "Deconstructor executed" << std::endl; };
 };
@@ -39,6 +48,9 @@ std::cout << "Usage: MyVector.exe <space> ax <space> ay <space> az
 " << std::endl;
 std::cout << "Operation Code '1' : Vector Addition" << std::endl;
 std::cout << "Operation Code '2' : Vector Substraction" << std::endl;
+std::cout << "Operation Code '3' : Vector Dot product" << std::endl;
+std::cout << "Operation Code '4' : Vector Cross product" << std::endl;
+std::cout << "Operation Code '5' : Vector Magnitude" << std::endl;
 
 exit(0);
 }
@@ -61,6 +73,21 @@ else if (op == 2)
 {
 std::cout << "op2: cx = " << vectors.sub1() << " cy = " <<
 vectors.sub2() << " cz = " << vectors.sub3() << std::endl;
+}
+else if (op == 3)
+{
+std::cout << "op3: cx = " << vectors.dot1() << " cy = " <<
+vectors.dot2() << " cz = " << vectors.dot3() << std::endl;
+}
+else if (op == 4)
+{
+std::cout << "op4: cx = " << vectors.cross1() << " cy = " <<
+vectors.cross2() << " cz = " << vectors.cross3() << std::endl;
+}
+else if (op == 5)
+{
+std::cout << "op5: |a| = " << vectors.mag_a() << " |b| = " <<
+vectors.mag_b() << std::endl;
 }
 else
 {
